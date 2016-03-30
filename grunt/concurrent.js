@@ -17,6 +17,7 @@ module.exports = {
     ],
     prodSecond: [
         'sass:prod',
+        'concat',
         'uglify'
     ],
     // Задачи изображений
