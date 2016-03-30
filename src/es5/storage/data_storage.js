@@ -1,1 +1,1 @@
-data = Object.create(null);//create storage without prototype
+data = Object.create(null);/*create storage without prototype*/

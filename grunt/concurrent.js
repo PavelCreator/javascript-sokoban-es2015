@@ -9,7 +9,8 @@ module.exports = {
     ],
     devSecond: [
         'sass:dev',
-        'uglify'
+        'concat:es5',
+        'uglify:es5'
     ],
     // Производственные задачи
     prodFirst: [
@@ -17,8 +18,8 @@ module.exports = {
     ],
     prodSecond: [
         'sass:prod',
-        'concat',
-        'uglify'
+        'concat:es5',
+        'uglify:es5'
     ],
     // Задачи изображений
     imgFirst: [
