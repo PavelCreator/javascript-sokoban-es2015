@@ -1,0 +1,13 @@
+{
+  "name": "PavelCreator",
+  "version": "0.0.2",
+  "license": "BSD-3-Clause",
+  "repository": {},
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "nightwatch": "^0.8.18"
+  },
+  "dependencies": {
+    "chai-dom": "^1.4.0"
+  }
+}

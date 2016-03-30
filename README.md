@@ -1,0 +1,1 @@
+<h1>JavaScript Sokoban (project on development stage)</h1>
