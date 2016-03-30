@@ -1,0 +1,29 @@
+#выполняет задачи prod при запуске grunt в командной строке
+default:
+  description: 'Default (production) build'
+  tasks:
+    - prod
+#выполняет задачи разработки (но не задачи изображений)
+dev:
+  description: 'Development build'
+  tasks:
+    - 'concurrent:devFirst'
+    - 'concurrent:devSecond'
+#выполняет задачи изображений.
+img:
+  description: 'Image tasks'
+  tasks:
+    - 'concurrent:imgFirst'
+#выполняет задачи разработки и изображений
+devimg:
+  description: 'Development build and image tasks'
+  tasks:
+    - dev
+    - img
+#выполняет задачи производства и изображений
+prod:
+  description: 'Production build'
+  tasks:
+    - 'concurrent:prodFirst'
+    - 'concurrent:prodSecond'
+    - img
