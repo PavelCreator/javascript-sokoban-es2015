@@ -1,5 +1,5 @@
 "use strict";
-var
+let
   /*Entities*/
   events,
   view,
@@ -9,6 +9,7 @@ var
 
   /*Storage Services*/
   data,
+  appSvc,
 
   /*Auxiliary Services*/
   logger,
