@@ -1,15 +1,15 @@
 module.exports = {
-  es5: {
+  es6: {
     options: {
       separator: ';',
     },
     src: [
-      'src/es5/hoisting.js',
-      'src/es5/storage/**.js',
-      'src/es5/services/**.js',
-      'src/es5/controllers/**.js',
-      'src/es5/start.js'
+      'src/es6/hoisting.js',
+      'src/es6/storage/**.js',
+      'src/es6/services/**.js',
+      'src/es6/controllers/**.js',
+      'src/es6/start.js'
     ],
-    dest: 'dist/script.js',
-  },
+    dest: 'temp/script_concat.js',
+  }
 };

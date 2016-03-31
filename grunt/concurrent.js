@@ -1,28 +1,20 @@
 module.exports = {
-    // Опции
-    options: {
-        limit: 3
-    },
-    // Задачи разработки
-    devFirst: [
-        'clean'
-    ],
-    devSecond: [
-        'sass:dev',
-        'concat:es5',
-        'uglify:es5'
-    ],
-    // Производственные задачи
-    prodFirst: [
-        'clean'
-    ],
-    prodSecond: [
-        'sass:prod',
-        'concat:es5',
-        'uglify:es5'
-    ],
-    // Задачи изображений
-    imgFirst: [
-        'imagemin'
-    ]
+  options: {
+    limit: 3
+  },
+  html: [
+    'htmlmin'
+  ],
+  css: [
+    'sass:dev'
+  ],
+  es2015: [
+    'concat:es6',
+    'browserify',
+    'copy:es6'
+    /*'uglify:es6'*/
+  ],
+  img: [
+    'imagemin'
+  ]
 };

@@ -1,10 +1,10 @@
 module.exports = {
-  es5: {
+  es6: {
     options: {
-      mangle: false
+      mangle: true
     },
     files: {
-      'dist/script.min.js': ['dist/script.js']
+      'dist/script.min.js': ['temp/script_browserify.js']
     }
   }
 };
