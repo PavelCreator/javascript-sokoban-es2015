@@ -1,27 +1,39 @@
-class Events{
-  keypress() {
-    window.captureEvents(Event.KEYPRESS);
-    window.onkeypress = pressed;
-    function pressed(e) {
+class Events {
+  static keypress() {
+    let pressed = (e) => {
       var ctrlDown = e.ctrlKey || e.metaKey
       switch (e.which) {
-/*        case 32:
-          if (!data.flag.disableKeyEvents && data.flag.mode !== 'watch') {
-            document.getElementById('hidden').focus();
-            timer.startOrStop();
-          }
-          break;*/
+        case 38:
+        case 104:
+          MoveSvc.rememberPosition('up');
+          break;
+        case 39:
+        case 102:
+          MoveSvc.rememberPosition('right');
+          break;
+        case 40:
+        case 98:
+          MoveSvc.rememberPosition('down');
+          break;
+        case 37:
+        case 100:
+          MoveSvc.rememberPosition('left');
+          break;
       }
-      console.log(e.which);
+      /*console.log(e.which);*/
     }
+    window.captureEvents(Event.KEYDOWN);
+    window.onkeydown = pressed;
   };
-  buttonPress() {
+
+  static buttonPress() {
   };
-  resizeEvent () {
+
+  static resizeEvent() {
     addEvent(window, "resize", function (event) {
     });
   };
-  onStart () {
+
+  onStart() {
   };
 }
-events = new Events();

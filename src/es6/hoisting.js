@@ -1,15 +1,11 @@
 "use strict";
 let
-  /*Entities*/
-  events,
-  view,
-
-  /*Timeout*/
-  oneSec,
-
   /*Storage Services*/
   data,
-  appSvc,
+  userPos = Object.create(null),
+  emap = Object.create(null),
+  targetsUnfilled = 0,
+  flag,
 
   /*Auxiliary Services*/
   logger,

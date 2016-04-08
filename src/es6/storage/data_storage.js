@@ -1,1 +1,0 @@
-data = Object.create(null);/*create storage without prototype*/

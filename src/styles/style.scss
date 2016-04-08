@@ -16,8 +16,8 @@
 .box{ @extend .cell;
   background:url("../images/box_50x50.jpg");
 }
-.box_on_place{ @extend .cell;
-  background:url("../images/box_on_place_50x50.jpg");
+.box_on_target{ @extend .cell;
+  background:url("../images/box_on_target_50x50.jpg");
 }
 .concrete{ @extend .cell;
   background:url("../images/concrete_50x50.jpg");
@@ -25,11 +25,14 @@
 .floor{ @extend .cell;
   background:url("../images/floor_50x50.jpg");
 }
-.place{ @extend .cell;
-  background:url("../images/place_50x50.jpg");
+.target{ @extend .cell;
+  background:url("../images/target_50x50.jpg");
 }
 .user{ @extend .cell;
   background:url("../images/user_50x50.jpg");
+}
+.user_on_target{ @extend .cell;
+  background:url("../images/user_on_target_50x50.jpg");
 }
 .wall{ @extend .cell;
   background:url("../images/wall_50x50.jpg");

@@ -1,3 +1,1 @@
-/*Begin*/
-view.onStart();
-events.onStart();
+MapSvc.generateMap('1.1');
