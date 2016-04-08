@@ -13,7 +13,7 @@ class MoveSvc {
         pos = {
           prev: emap[`c${userPos.x}x${userPos.y}`],
           target: emap[`c${userPos.x + 1}x${userPos.y}`],
-          next: emap[`c${userPos.x + 1}x${userPos.y}`]
+          next: emap[`c${userPos.x + 2}x${userPos.y}`]
         }
         break;
       case 'down':
@@ -35,6 +35,7 @@ class MoveSvc {
   }
 
   static analitic(pos) {
+    console.log('analitic',pos);
     if (pos.target.movable) {
       if (pos.next.stepable) {
         MoveSvc.action('move', pos)
@@ -51,28 +52,41 @@ class MoveSvc {
   }
 
   static action(action, pos) {
+    console.log('begin',action,pos);
     switch (action) {
       case 'go':
-        console.log(pos);
-
-        if (pos.target.targetable) {
-          pos.prev = new Floor(pos.prev.x,pos.prev.y);
-          pos.target = new UserOnTarget(pos.target.x,pos.target.y);
-        } else {
-          pos.prev = new Floor(pos.prev.x, pos.prev.y);
+        if (pos.prev.constructor.name == 'Target') {
+          pos.prev = new Target(pos.prev.x, pos.prev.y, true);
           pos.target = new User(pos.target.x, pos.target.y);
+        } else {
+          if (pos.target.targetable) {
+            pos.prev = new Floor(pos.prev.x, pos.prev.y);
+            pos.target = new UserOnTarget(pos.target.x, pos.target.y);
+          } else {
+            pos.prev = new Floor(pos.prev.x, pos.prev.y);
+            pos.target = new User(pos.target.x, pos.target.y);
+          }
         }
-
         break;
 
       case 'move':
-        console.log('move');
+        if (pos.next.stepable){
+          pos.prev = new Floor(pos.prev.x, pos.prev.y);
+          pos.target = new User(pos.target.x, pos.target.y);
+          if (pos.next.targetable){
+            pos.next = new FilledTarget(pos.next.x, pos.next.y);
+          }else{
+            pos.next = new Box(pos.next.x, pos.next.y);
+          }
+        }else{
+          console.log('blocked');
+        }
         break;
 
       case 'blocked':
-        console.log('blocked');
+        /*console.log('blocked');*/
         break;
     }
-
+    console.log('end',action,pos);
   }
 }
