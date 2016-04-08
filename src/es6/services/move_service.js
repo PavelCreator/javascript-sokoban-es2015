@@ -1,5 +1,6 @@
 class MoveSvc {
   static rememberPosition(direction) {
+    console.log(userPos.x, userPos.y);
     let pos;
     switch (direction) {
       case 'up':
@@ -35,7 +36,7 @@ class MoveSvc {
   }
 
   static analitic(pos) {
-    console.log('analitic',pos);
+    console.log('analitic',print_r(pos));
     if (pos.target.movable) {
       if (pos.next.stepable) {
         MoveSvc.action('move', pos)
@@ -52,7 +53,7 @@ class MoveSvc {
   }
 
   static action(action, pos) {
-    console.log('begin',action,pos);
+    /*console.log('begin',action,print_r(pos));*/
     switch (action) {
       case 'go':
         if (pos.prev.constructor.name == 'Target') {
@@ -84,9 +85,9 @@ class MoveSvc {
         break;
 
       case 'blocked':
-        /*console.log('blocked');*/
         break;
     }
-    console.log('end',action,pos);
+    /*console.log('end',action,print_r(pos));*/
+    /*console.log('end',emap);*/
   }
 }

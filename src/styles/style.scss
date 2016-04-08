@@ -37,3 +37,9 @@
 .wall{ @extend .cell;
   background:url("../images/wall_50x50.jpg");
 }
+#map>.row:first-child,#map>.row:last-child{
+  display:none;
+}
+#map>.row>div:first-child,#map>.row>div:last-child{
+  display:none;
+}

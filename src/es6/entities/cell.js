@@ -10,6 +10,6 @@ class Cell {
   };
 
   renewView() {
-    document.getElementById(`c${this.x}x${this.y}`).innerHTML = this.getHTML();
+    document.getElementById(`c${this.x}x${this.y}`).className = this.cssClass;
   };
 }
