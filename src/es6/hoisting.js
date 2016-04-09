@@ -1,10 +1,8 @@
 "use strict";
 let
   /*Storage Services*/
-  data,
-  userPos = Object.create(null),
+  game,
   emap = Object.create(null),
-  targetsUnfilled = 0,
   flag,
 
   /*Auxiliary Services*/

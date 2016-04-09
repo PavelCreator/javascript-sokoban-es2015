@@ -1,9 +1,43 @@
-.map{
-
+body{
+  margin:0;
 }
-.row{
+body *{
+  outline:none !important;
+  font-family:'Coda', cursive;
+}
+.header{
+  text-align:center;
+  color:#777;
+}
+.title{
+  font-size:37px;
+  margin-bottom:-3px;
+}
+.author{
+  font-size:19px;
+  margin-bottom:6px;
+  margin-top:0;
+}
+.big-wrapper{
+  align-items:center;
+  display:flex;
+  height:100%;
+  justify-content:center;
+  left:0;
+  overflow:auto;
+  position:fixed;
+  width:100%;
+  background:#bcbcbc; /* Old browsers */
+  background:-moz-linear-gradient(left, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* FF3.6-15 */
+  background:-webkit-linear-gradient(left, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* Chrome10-25,Safari5.1-6 */
+  background:linear-gradient(to right, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbcbc', endColorstr='#bcbcbc', GradientType=1); /* IE6-9 */
+}
+.map{
+}
+._row{
   display:block;
-  line-height: 0;
+  line-height:0;
 }
 .cell{
   width:50px;
@@ -15,7 +49,7 @@
 #img_preload{
   opacity:0;
   height:1px;
-  &>div{
+  & > div{
     height:1px;
   }
 }
@@ -43,9 +77,27 @@
 .wall{ @extend .cell;
   background:url("../images/wall_50x50.jpg");
 }
-#map>.row:first-child,#map>.row:last-child{
+#map > ._row:first-child, #map > ._row:last-child{
   display:none;
 }
-#map>.row>div:first-child,#map>.row>div:last-child{
+#map > ._row > div:first-child, #map > ._row > div:last-child{
   display:none;
+}
+.input-margin{
+  margin:0 10px 0 5px;
+}
+.game-details{
+  margin-bottom:10px;
+  input{ @extend .input-margin;
+    width:40px;
+    margin:0 10px 0 5px;
+    display:inline-block;
+    &.wide-input{
+      width:50px;
+    }
+  }
+  select.level-list{ @extend .input-margin;
+    display: inline-block;
+    width: 100px;
+  }
 }

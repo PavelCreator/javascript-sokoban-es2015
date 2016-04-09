@@ -1,7 +1,8 @@
 class AppSvc {
 
   static gameOver() {
-    alert('gameOver()');
+    alert('gameOver');
+    console.log('gameOver');
   }
 
   static runApp() {

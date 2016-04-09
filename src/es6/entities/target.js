@@ -5,7 +5,7 @@ class Target extends Floor {
     this.letter = 't';
     this.cssClass = 'target';
     if (!unfilled) {
-      targetsUnfilled++;
+      game.targetsUnfilled++;
     }
     if (flag.get('user can move')) {
       this.renewView();

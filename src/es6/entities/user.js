@@ -11,7 +11,7 @@ class User extends Floor {
   }
 
   setUserPosition() {
-    userPos = {
+    game.userPos = {
       x: this.x,
       y: this.y
     };

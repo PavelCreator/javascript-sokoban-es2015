@@ -1,1 +1,1 @@
-MapSvc.generateMap('1.1');
+MapSvc.generateMap('1-1');
