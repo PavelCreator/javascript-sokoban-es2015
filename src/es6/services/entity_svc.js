@@ -6,23 +6,23 @@ class EntitySvc {
         entity = new Concrete(x, y);
         break;
 
-      case 'w':
+      case 'X':
         entity = new Wall(x, y);
         break;
 
-      case 'f':
+      case ' ':
         entity = new Floor(x, y);
         break;
 
-      case 't':
+      case '.':
         entity = new Target(x, y);
         break;
 
-      case 'u':
+      case '@':
         entity = new User(x, y);
         break;
 
-      case 'b':
+      case '*':
         entity = new Box(x, y);
         break;
 
@@ -31,10 +31,5 @@ class EntitySvc {
         break;
     }
     emap[`c${x}x${y}`] = entity;
-  }
-
-  static runApp(){
-    flag.set('user can move',true);
-    Events.keypress();
   }
 }

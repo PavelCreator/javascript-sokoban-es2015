@@ -26,7 +26,15 @@ class Events {
     window.onkeydown = pressed;
   };
 
-  static buttonPress() {
+  static uiPress() {
+    document.getElementById('level-list').onchange = () => {
+      let value = document.getElementById('level-list').value;
+      MapSvc.generateMap(value);
+      localStorage.setItem("level", value);
+    };
+    document.getElementById('restart').onclick = () => {
+      MapSvc.generateMap(document.getElementById('level-list').value);
+    };
   };
 
   static resizeEvent() {
@@ -34,6 +42,8 @@ class Events {
     });
   };
 
-  onStart() {
+  static read() {
+    this.keypress();
+    this.uiPress();
   };
 }

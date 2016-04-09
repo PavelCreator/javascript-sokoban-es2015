@@ -6,8 +6,8 @@ Object.defineProperty(game, 'steps', {
   },
   set: function (newValue) {
     document.getElementById("steps").value = newValue;
-    if (!flag.get('game started')) {
-      flag.set('game started', true);
+    if (!flag.get('first step done')) {
+      flag.set('first step done', true);
     }
   },
   configurable: true
@@ -18,7 +18,7 @@ Object.defineProperty(game, 'targetsUnfilled', {
   },
   set: function (newValue) {
     document.getElementById("targetsUnfilled").value = newValue;
-    if (flag.get('game started')) {
+    if (flag.get('first step done')) {
       if (newValue === 0) {
         AppSvc.gameOver();
       }
@@ -26,5 +26,3 @@ Object.defineProperty(game, 'targetsUnfilled', {
   },
   configurable: true
 });
-game.targetsUnfilled = 0;
-game.steps = 0;

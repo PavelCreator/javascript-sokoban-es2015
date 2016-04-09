@@ -187,3 +187,25 @@
 .table > thead > tr > th{
   border-top: 2px solid #ddd !important;
 }
+
+.btn-color2{
+  background:#fff; /* Old browsers */
+  background:-moz-linear-gradient(top, #fff 0%, #f1f1f1 50%, #eee 51%, #f6f6f6 100%); /* FF3.6-15 */
+  background:-webkit-linear-gradient(top, #fff 0%, #f1f1f1 50%, #eee 51%, #f6f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+  background:linear-gradient(to bottom, #fff 0%, #f1f1f1 50%, #eee 51%, #f6f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0); /* IE6-9 */
+}
+.btn-color1{
+  background:#f3f3f3; /* Old browsers */
+  background:-moz-linear-gradient(top, #f3f3f3 0%, #e6e6e6 50%, #dadada 51%, #fafafa 100%); /* FF3.6-15 */
+  background:-webkit-linear-gradient(top, #f3f3f3 0%, #e6e6e6 50%, #dadada 51%, #fafafa 100%); /* Chrome10-25,Safari5.1-6 */
+  background:linear-gradient(to bottom, #f3f3f3 0%, #e6e6e6 50%, #dadada 51%, #fafafa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f3f3', endColorstr='#fafafa', GradientType=0); /* IE6-9 */
+}
+.btn-color3{
+  background:#eee; /* Old browsers */
+  background:-moz-linear-gradient(top, #eee 0%, #e1e1e1 50%, #ddd 51%, #e6e6e6 100%); /* FF3.6-15 */
+  background:-webkit-linear-gradient(top, #eee 0%, #e1e1e1 50%, #ddd 51%, #e6e6e6 100%); /* Chrome10-25,Safari5.1-6 */
+  background:linear-gradient(to bottom, #eee 0%, #e1e1e1 50%, #ddd 51%, #e6e6e6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e6e6e6', GradientType=0); /* IE6-9 */
+}

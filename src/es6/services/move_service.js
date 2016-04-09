@@ -57,36 +57,35 @@ class MoveSvc {
     /*console.log('begin',action,print_r(pos));*/
     switch (action) {
       case 'go':
-        if (pos.prev.constructor.name == 'UserOnTarget') {
-          emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true);
-        } else {
-          emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
-        }
-        if (pos.target.targetable) {
-          emap[`c${pos.target.x}x${pos.target.y}`] = new UserOnTarget(pos.target.x, pos.target.y);
-        } else {
-          emap[`c${pos.target.x}x${pos.target.y}`] = new User(pos.target.x, pos.target.y);
-        }
+        (pos.prev.constructor.name == 'UserOnTarget')
+          ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
+          : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
+
+        (pos.target.targetable)
+          ? emap[`c${pos.target.x}x${pos.target.y}`] = new UserOnTarget(pos.target.x, pos.target.y)
+          : emap[`c${pos.target.x}x${pos.target.y}`] = new User(pos.target.x, pos.target.y);
+
         game.steps++;
         break;
 
       case 'move':
         if (pos.next.stepable) {
-          if (pos.prev.constructor.name == 'UserOnTarget') {
-            emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true);
-          }else{
-            emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
-          }
-          if (pos.target.targetable) {
-            emap[`c${pos.target.x}x${pos.target.y}`] = new UserOnTarget(pos.target.x, pos.target.y);
-          } else {
-            emap[`c${pos.target.x}x${pos.target.y}`] = new User(pos.target.x, pos.target.y);
-          }
-          if (pos.next.targetable) {
-            emap[`c${pos.next.x}x${pos.next.y}`] = new FilledTarget(pos.next.x, pos.next.y);
-          } else {
-            emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y);
-          }
+          (pos.prev.constructor.name == 'UserOnTarget')
+            ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
+            : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
+
+          (pos.target.targetable)
+            ? emap[`c${pos.target.x}x${pos.target.y}`] = new UserOnTarget(pos.target.x, pos.target.y)
+            : emap[`c${pos.target.x}x${pos.target.y}`] = new User(pos.target.x, pos.target.y);
+          (pos.next.targetable)
+            ? (
+            (pos.target.targetable)
+              ? emap[`c${pos.next.x}x${pos.next.y}`] = new FilledTarget(pos.next.x, pos.next.y, true)
+              : emap[`c${pos.next.x}x${pos.next.y}`] = new FilledTarget(pos.next.x, pos.next.y))
+            : (
+            (pos.target.targetable)
+              ? emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y, true)
+              : emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y))
           game.steps++;
         } else {
           console.log('blocked');

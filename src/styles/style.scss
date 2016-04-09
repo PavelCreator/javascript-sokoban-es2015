@@ -40,8 +40,8 @@ body *{
   line-height:0;
 }
 .cell{
-  width:50px;
-  height:50px;
+  width:30px;
+  height:30px;
   display:inline-block;
   margin:0;
   padding:0;
@@ -54,28 +54,28 @@ body *{
   }
 }
 .box{ @extend .cell;
-  background:url("../images/box_50x50.jpg");
+  background:url("../images/box.png");
 }
 .box_on_target{ @extend .cell;
-  background:url("../images/box_on_target_50x50.jpg");
+  background:url("../images/box_on_target.png");
 }
 .concrete{ @extend .cell;
-  background:url("../images/concrete_50x50.jpg");
+  background:url("../images/concrete.jpg");
 }
 .floor{ @extend .cell;
-  background:url("../images/floor_50x50.jpg");
+  background:url("../images/floor.jpg");
 }
 .target{ @extend .cell;
-  background:url("../images/target_50x50.jpg");
+  background:url("../images/target.jpg");
 }
 .user{ @extend .cell;
-  background:url("../images/user_50x50.jpg");
+  background:url("../images/user.jpg");
 }
 .user_on_target{ @extend .cell;
-  background:url("../images/user_on_target_50x50.jpg");
+  background:url("../images/user_on_target.jpg");
 }
 .wall{ @extend .cell;
-  background:url("../images/wall_50x50.jpg");
+  background:url("../images/wall.jpg");
 }
 #map > ._row:first-child, #map > ._row:last-child{
   display:none;
@@ -100,4 +100,12 @@ body *{
     display: inline-block;
     width: 100px;
   }
+}
+._link{
+  font-weight:bold;
+}
+.btn-margin{
+  font-weight:bold;
+  position:relative;
+  top:-2px;
 }

@@ -7,6 +7,6 @@ class AppSvc {
 
   static runApp() {
     flag.set('user can move', true);
-    Events.keypress();
+    Events.read();
   }
 }
