@@ -12,7 +12,13 @@
   margin:0;
   padding:0;
 }
-
+#img_preload{
+  opacity:0;
+  height:1px;
+  &>div{
+    height:1px;
+  }
+}
 .box{ @extend .cell;
   background:url("../images/box_50x50.jpg");
 }
