@@ -1,15 +1,15 @@
-           XXXXX
-          XX   XX   
-         XX     X   
-        XX  **  X   
-       XX **  * X   
-       X *    * X   
-XXXX   X   ** XXXXX 
-X  XXXXXXXX XX    X 
-X..           ***@X 
-X.X XXXXXXX XX   XX 
+cccccccccccXXXXXcccc
+ccccccccccXX   XXccc
+cccccccccXX     Xccc
+ccccccccXX  **  Xccc
+cccccccXX **  * Xccc
+cccccccX *    * Xccc
+XXXXcccX   ** XXXXXc
+X  XXXXXXXX XX    Xc
+X..           ***@Xc
+X.X XXXXXXX XX   XXc
 X.X XXXXXXX. X* *XXX
 X........... X   * X
 XXXXXXXXXXXXXX  *  X
-             XX  XXX
-              XXXX
+cccccccccccccXX  XXX
+ccccccccccccccXXXXcc

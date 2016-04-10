@@ -27,7 +27,7 @@ class EntitySvc {
         break;
 
       case '&':
-        entity = new FilledTarget(x, y);
+        entity = new FilledTarget(x, y, 'filled');
         break;
     }
     emap[`c${x}x${y}`] = entity;

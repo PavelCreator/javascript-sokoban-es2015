@@ -1,18 +1,18 @@
- XXXXXXXX
- X@XX   XXXX 
- X *   *   X 
- X  * * ***X 
- X **X X   X 
-XX*    *   X 
+cXXXXXXXXcccc
+cX@XX   XXXXc
+cX *   *   Xc
+cX  * * ***Xc
+cX **X X   Xc
+XX*    *   Xc
 X  *  *****XX
 X *XXXX X   X
 X  *....X   X
 X XX....X** X
 X XX....   XX
-X   ....X  X 
-XX X....X**X 
- X X....X  X 
- X         X 
- XXXX XX*XXX 
-    X    X   
-    XXXXXX
+X   ....X  Xc
+XX X....X**Xc
+cX X....X  Xc
+cX         Xc
+cXXXX XX*XXXc
+ccccX    Xccc
+ccccXXXXXXccc

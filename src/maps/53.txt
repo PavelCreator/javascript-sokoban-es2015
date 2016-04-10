@@ -1,17 +1,17 @@
-   XXXXXXXXXX
-   X  XXX   X
-   X *   *  X
-   X  XXXX*XX
-   XX X  X  X
-  XX  X.&   X
-  X  XX..X  X
-  X @ X.&X XX
-  X X*X..X* X
-  X * X..X  X
-  X X X&&X  X
-  X * X..X*XX
-  X    .&X  X
- XXX  X  X  X
+cccXXXXXXXXXX
+cccX  XXX   X
+cccX *   *  X
+cccX  XXXX*XX
+cccXX X  X  X
+ccXX  X.&   X
+ccX  XX..X  X
+ccX @ X.&X XX
+ccX X*X..X* X
+ccX * X..X  X
+ccX X X&&X  X
+ccX * X..X*XX
+ccX    .&X  X
+cXXX  X  X  X
 XX    XXXX  X
 X  XXXXXXX*XX
 X *      *  X

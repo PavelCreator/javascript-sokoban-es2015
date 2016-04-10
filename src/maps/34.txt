@@ -1,5 +1,5 @@
-XXXXXXXXXXXX
-XX     XX  X
+cXXXXXXXXXXX
+cX     XX  X
 XX   *   * X
 XXXX XX ** X
 X   * X    X
@@ -11,5 +11,5 @@ X   ..X XXXX
 XXXX.. * X@X
 X.....X *X X
 XX....X  * X
-XXX..XX    X
-XXXXXXXXXXXX
+cXX..XX    X
+ccXXXXXXXXXX

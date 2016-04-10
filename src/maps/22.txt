@@ -1,20 +1,20 @@
-            XXXX
- XXXXXXXXXXXX  XXXXX
- X    X  X  *  X   XX
- X * * *  * X * *   X
- XX* *   X @X *   * X
-XXX   XXXXXXXXXXXX XX
-X  * *X  X......X *X
-X X   X  X......XX X
-X  XX XX X .....X  X
-X X      *...... * X
-X X * XX X......X  X
-X  * *X  X......X *X
-X *   X  XX*XXXXX  X
-X * * XXXX * *  * *X
+ccccccccccccXXXXcccccc
+cXXXXXXXXXXXX  XXXXXcc
+cX    X  X  *  X   XXc
+cX * * *  * X * *   Xc
+cXX* *   X @X *   * Xc
+XXX   XXXXXXXXXXXX XXc
+X  * *X  X......X *Xcc
+X X   X  X......XX Xcc
+X  XX XX X .....X  Xcc
+X X      *...... * Xcc
+X X * XX X......X  Xcc
+X  * *X  X......X *Xcc
+X *   X  XX*XXXXX  Xcc
+X * * XXXX * *  * *Xcc
 XX X     * * * *   XXX
- X  XXXXXX *    *    X
- X         X XXXXXXX X
- XXXXXXX X*          X
-       X   XXXXXXXXXXX
-       XXXXX
+cX  XXXXXX *    *    X
+cX         X XXXXXXX X
+cXXXXXXX X*          X
+cccccccX   XXXXXXXXXXX
+cccccccXXXXXcccccccccc

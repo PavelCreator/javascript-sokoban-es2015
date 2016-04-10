@@ -1,20 +1,20 @@
- XXXXX
- X   XXXXXXX
- X * XXX   X
- X *    ** X
- XX XXXX   X
-XXX X  X XXX
-X   X  X@XX
-X **    * X
+cXXXXXcccccccc
+cX   XXXXXXXcc
+cX * XXX   Xcc
+cX *    ** Xcc
+cXX XXXX   Xcc
+XXX X  X XXXcc
+X   X  X@XXccc
+X **    * Xccc
 X   X X * XXXX
 XXXXX X   X  X
- X   *XXXX   X
- X  *     *  X
- XX   XXXXX XX
- XXXXXXXXXX  X
+cX   *XXXX   X
+cX  *     *  X
+cXX   XXXXX XX
+cXXXXXXXXXX  X
 XX....X *  * X
 X.....X **X  X
 X.. ..X *  * X
 X.....*   X  X
 XX  XXXXXXXXXX
- XXXX
+cXXXXccccccccc

@@ -1,12 +1,12 @@
- XXXXXXX
- X  X  XXXXX
-XX  X  X...XXX
-X  *X  X...  X
-X * X** ...  X
-X  *X  X... .X
+cXXXXXXXccccccc
+cX  X  XXXXXccc
+XX  X  X...XXXc
+X  *X  X...  Xc
+X * X** ...  Xc
+X  *X  X... .Xc
 X   X *XXXXXXXX
 XX*       * * X
 XX  X  ** X   X
- XXXXXX  XX**@X
-      X      XX
-      XXXXXXXX
+cXXXXXX  XX**@X
+ccccccX      XX
+ccccccXXXXXXXXc

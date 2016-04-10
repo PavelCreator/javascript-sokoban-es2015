@@ -1,11 +1,11 @@
-        XXXXXXX
-    XXXXX  X  XXXX 
-    X   X   *    X 
- XXXX X** XX XX  X 
+ccccccccXXXXXXXcccc
+ccccXXXXX  X  XXXXc
+ccccX   X   *    Xc
+cXXXX X** XX XX  Xc
 XX      X X  XX XXX
 X  XXX *X*  *  *  X
 X...    X XX  X   X
 X...X    @ X XXX XX
 X...X  XXX  *  *  X
-XXXXXXXX XX   X   X
-          XXXXXXXXX
+XXXXXXXXcXX   X   X
+ccccccccccXXXXXXXXX

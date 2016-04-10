@@ -1,14 +1,14 @@
-       XXXXXXX
-       X  X  XXXX
-       X *X* X  XX
+cccccccXXXXXXXccccccccccc
+cccccccX  X  XXXXcccccccc
+cccccccX *X* X  XXccccccc
 XXXXXXXX  X  X   XXXXXXXX
 X....  X *X* X  *X  X   X
 X....X X     X*  X      X
 X..X.    *X  X *    X*  X
 X... @XX  X* X*  X  X   X
 X.... XX *X     *XXXXXXXX
-XXXXXXXX  X**X*  X
-       X *X  X  *X
-       X  X  X   X
-       XXXX  XXXXX
-          XXXX
+XXXXXXXX  X**X*  Xccccccc
+cccccccX *X  X  *Xccccccc
+cccccccX  X  X   Xccccccc
+cccccccXXXX  XXXXXccccccc
+ccccccccccXXXXccccccccccc

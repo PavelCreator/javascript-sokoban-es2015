@@ -1,13 +1,13 @@
-XXXXXXXXXXXXXXXX
-X              X
-X X XXXXXX     X
-X X  * * * *X  X
+XXXXXXXXXXXXXXXXc
+X              Xc
+X X XXXXXX     Xc
+X X  * * * *X  Xc
 X X   *@*   XX XX
 X X X* * *XXX...X
 X X   * *  XX...X
 X XXX*** * XX...X
 X     X XX XX...X
 XXXXX   XX XX...X
-    XXXXX     XXX
-        X     X
-        XXXXXXX
+ccccXXXXX     XXX
+ccccccccX     Xcc
+ccccccccXXXXXXXcc
