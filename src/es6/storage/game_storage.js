@@ -42,6 +42,7 @@ Object.defineProperty(game, 'currentLevel', {
     return this.currentLevelValue;
   },
   set: function (mapNum) {
+    localStorage.setItem("level", mapNum);
     View.levelNumView(mapNum);
     MapSvc.generateMap(mapNum);
     this.currentLevelValue = mapNum;
