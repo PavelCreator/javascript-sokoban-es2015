@@ -31,12 +31,15 @@ class Events {
       let value = document.getElementById('level-list').value;
       game.currentLevel = value;
       localStorage.setItem("level", value);
+      document.getElementById('hidden').focus();
     };
     document.getElementById('restart').onclick = () => {
       MapSvc.generateMap(game.currentLevel);
+      document.getElementById('hidden').focus();
     };
     document.getElementById('go-to-next-level').onclick = () => {
       game.currentLevel++;
+      View.buildLevelList();
       events.modalLogic.closeModal();
     };
   };
