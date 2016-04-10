@@ -1,0 +1,13 @@
+ccccccccccccccXXXXXXXX
+ccccccccccccccX  ....X
+cccXXXXXXXXXXXX  ....X
+cccX    X  * *   ....X
+cccX ***X*  * X  ....X
+cccX  *     * X  ....X
+cccX ** X* * *XXXXXXXX
+XXXX  * X     Xccccccc
+X   X XXXXXXXXXccccccc
+X    *  XXcccccccccccc
+X **X** @Xcccccccccccc
+X   X   XXcccccccccccc
+XXXXXXXXXccccccccccccc

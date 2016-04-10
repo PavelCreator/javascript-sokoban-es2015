@@ -1,4 +1,4 @@
-game = Object.create(null),
+game = Object.create(null);
 game.userPos = Object.create(null);
 Object.defineProperty(game, 'steps', {
   get: function () {
@@ -23,6 +23,29 @@ Object.defineProperty(game, 'targetsUnfilled', {
         AppSvc.gameOver();
       }
     }
+  },
+  configurable: true
+});
+game.modalContent = {
+  welcome(){
+    document.getElementById('modal-welcome').hidden = false;
+    document.getElementById('modal-new-level').hidden = true;
+  },
+  nextlevel(){
+    let currentLevel = document.getElementById('level-list').value;
+    document.getElementById('modal-welcome').hidden = true;
+    document.getElementById('modal-new-level').hidden = false;
+  }
+}
+Object.defineProperty(game, 'currentLevel', {
+  get: function () {
+    return this.currentLevelValue;
+  },
+  set: function (mapNum) {
+    View.levelNumView(mapNum);
+    MapSvc.generateMap(mapNum);
+    this.currentLevelValue = mapNum;
+    console.log(game.currentLevel);
   },
   configurable: true
 });

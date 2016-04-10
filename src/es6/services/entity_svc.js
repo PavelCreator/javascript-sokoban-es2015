@@ -26,7 +26,7 @@ class EntitySvc {
         entity = new Box(x, y);
         break;
 
-      case 'g':
+      case '&':
         entity = new FilledTarget(x, y);
         break;
     }

@@ -1,0 +1,10 @@
+ccccccccXXXXXXXXc
+ccccccccX     @Xc
+ccccccccX *X* XXc
+ccccccccX *  *Xcc
+ccccccccXX* * Xcc
+XXXXXXXXX * X XXX
+X....  XX *  *  X
+XX...    *  *   X
+X....  XXXXXXXXXX
+XXXXXXXXccccccccc

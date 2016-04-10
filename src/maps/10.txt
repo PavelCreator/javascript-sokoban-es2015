@@ -1,0 +1,20 @@
+ccccccccccccccXXXXccc
+cccccccccXXXXXX  Xccc
+cccccccccX       Xccc
+cccccccccX  XXXX XXXc
+cXXXccXXXXX XXX    Xc
+XX@XXXX   *** X    Xc
+X **   ** *   X....XX
+X  ***X    *  X.....X
+X *   X ** ** X.....X
+XXX   X  *    X.....X
+ccX   X * * * X.....X
+ccX XXXXXXX XXX.....X
+ccX   X  * *  X.....X
+ccXXX X ** * *XXXXXXX
+ccccX X  *      Xcccc
+ccccX X *** *** Xcccc
+ccccX X       X Xcccc
+ccccX XXXXXXXXX Xcccc
+ccccX           Xcccc
+ccccXXXXXXXXXXXXXcccc

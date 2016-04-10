@@ -1,8 +1,15 @@
 class AppSvc {
 
+  static resetLevel() {
+    flag.set('first step done', false);
+    flag.set('user can move', false);
+    game.targetsUnfilled = 0;
+    game.steps = 0;
+    emap = Object.create(null);
+  }
+
   static gameOver() {
-    alert('gameOver');
-    console.log('gameOver');
+    events.modalLogic.openModal('nextlevel');
   }
 
   static runApp() {

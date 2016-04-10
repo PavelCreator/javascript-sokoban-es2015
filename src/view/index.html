@@ -13,6 +13,38 @@
 <body>
 <div class="big-wrapper">
   <div class="parent">
+    <div id="modalWrapper" class="modal">
+      <div class="modal-content">
+        <span class="close-x" id="closeModal"><i class="fa fa-times"></i></span>
+        <div id="modal-welcome">
+          <h3 class="modal-title tac">Welcome to ES2015 Sokoban</h3>
+          <p></p>
+          <p>The game is controlled with the <span class="emphasize">keyboard <i class="fa fa-keyboard-o"></i></span> -
+            use
+            keys
+            <i class="fa fa-caret-square-o-up"></i>
+            <i class="fa fa-caret-square-o-right"></i>
+            <i class="fa fa-caret-square-o-down"></i>
+            <i class="fa fa-caret-square-o-left"></i>
+          </p>
+          <p>The objective of the Sokoban game is <span class="emphasize">to move boxes</span> -
+            <span class="box soko-cells"></span> to marked locations -
+            <span class="target soko-cells"></span> by pushing them.</p>
+          <p>The level is passed when <span class="emphasize">all boxes</span> are located at the marked locations -
+            <span class="box_on_target soko-cells"></span></p>
+          <p>Current level is <span class="emphasize">stored <i class="fa fa-database"></i></span> in the browser</p>
+          <p></p>
+          <p class="emphasize modal-title tac">Enjoy using! <i class="fa fa-smile-o"></i></p>
+        </div>
+        <div id="modal-new-level" class="tac">
+          <h3 class="modal-title tac">Congratulations! Level <span id="modal-level--current"></span> successfully passed
+          </h3>
+          <button class="btn btn-default btn-lg btn-color2 emphasize modal-title tac" id="go-to-next-level">
+            Go to next <span id="modal-level--next"></span> level! <i class="fa fa-smile-o"></i>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="header">
       <h2 class="title">ES2015 Sokoban</h2>
       <p class="author">by PavelCreator:
@@ -34,10 +66,12 @@
           <label for="choose_level">Choose level: </label>
           <select class="form-control level-list" id="level-list">
             <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
           </select>
-          <button class="btn btn-default btn-color2 btn-margin" id="restart">RESTART <i class="fa fa-refresh"></i></button>
+          <button class="btn btn-default btn-color2 btn-margin" id="restart">RESTART <i class="fa fa-refresh"></i>
+          </button>
+          <button class="btn btn-default btn-color2 btn-margin" id="openModal">HOW TO PLAY
+            <i class="fa fa-info-circle"></i>
+          </button>
         </p>
       </div>
       <div id="map"></div>
@@ -53,6 +87,7 @@
     </div>
   </div>
 </div>
+
 <script type="text/javascript" src="dist/script.min.js"></script>
 </body>
 </html>

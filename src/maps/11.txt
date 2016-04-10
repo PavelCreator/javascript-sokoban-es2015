@@ -1,0 +1,15 @@
+ccccccccccXXXXccccc
+cccccXXXXcX  Xccccc
+cccXXX  XXX* Xccccc
+ccXX   @  *  Xccccc
+cXX  * **XX XXccccc
+cX  X*XX     Xccccc
+cX X * ** X XXXcccc
+cX   * X  X * XXXXX
+XXXX    X  ** X   X
+XXXX XX *         X
+X.    XXX  XXXXXXXX
+X.. ..XcXXXXccccccc
+X...X.Xcccccccccccc
+X.....Xcccccccccccc
+XXXXXXXcccccccccccc

@@ -10,6 +10,6 @@ class Cell {
   };
 
   renewView() {
-    document.getElementById(`c${this.x}x${this.y}`).className = this.cssClass;
+    View.renewCell(this.x,this.y,this.cssClass);
   };
 }
