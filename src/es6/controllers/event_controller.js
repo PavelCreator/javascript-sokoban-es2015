@@ -22,7 +22,6 @@ class Events {
       }
       /*console.log(e.which);*/
     }
-    window.captureEvents(Event.KEYDOWN);
     window.onkeydown = pressed;
   };
 
@@ -37,11 +36,12 @@ class Events {
       MapSvc.generateMap(game.currentLevel);
       view.lastStep.block();
       view.restart.block();
-      document.getElementById('hidden').focus();
       View.countOfLastSteps();
+      document.getElementById('hidden').focus();
     };
     document.getElementById('undo_last_step').onclick = () => {
       AppSvc.restoreLastStep();
+      document.getElementById('hidden').focus();
     };
     document.getElementById('go-to-next-level').onclick = () => {
       game.currentLevel++;

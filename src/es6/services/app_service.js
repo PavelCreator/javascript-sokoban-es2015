@@ -59,12 +59,12 @@ class AppSvc {
     }
   }
 
-
   static rememberLastStep(){
     view.lastStep.unblock();
     view.restart.unblock();
     game.lastStep[game.steps] = Object.create(null);
-    game.lastStep[game.steps].emap = Object.assign({}, emap);
+    //game.lastStep[game.steps].emap = Object.assign({}, emap);
+    game.lastStep[game.steps].emap = copy({}, emap);
     game.lastStep[game.steps].targetsUnfilled = game.targetsUnfilled;
     game.lastStep[game.steps].steps = game.steps;
     if (game.lastStep[+game.steps - 20]){

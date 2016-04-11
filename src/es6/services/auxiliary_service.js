@@ -46,3 +46,12 @@ function countOfOject(obj) {
   for (let x in obj) i++;
   return i;
 }
+function copy(dst) {
+  for (var i = 1; i < arguments.length; i++) {
+    var arg = arguments[i];
+    for (var key in arg) {
+      dst[key] = arg[key];
+    }
+  }
+  return dst;
+}

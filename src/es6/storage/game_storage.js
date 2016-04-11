@@ -10,8 +10,7 @@ Object.defineProperty(game, 'steps', {
     if (!flag.get('first step done')) {
       flag.set('first step done', true);
     }
-  },
-  configurable: true
+  }
 });
 Object.defineProperty(game, 'targetsUnfilled', {
   get: function () {
@@ -25,8 +24,7 @@ Object.defineProperty(game, 'targetsUnfilled', {
         AppSvc.nextLevel();
       }
     }
-  },
-  configurable: true
+  }
 });
 Object.defineProperty(game, 'currentLevel', {
   get: function () {
@@ -39,8 +37,7 @@ Object.defineProperty(game, 'currentLevel', {
     View.levelNumView(mapNum);
     MapSvc.generateMap(mapNum);
     View.countOfLastSteps();
-  },
-  configurable: true
+  }
 });
 
 game.passedLevels = Object.create(null);

@@ -59,7 +59,7 @@ class MoveSvc {
       case 'go':
         AppSvc.rememberLastStep();
 
-        (pos.prev.constructor.name == 'UserOnTarget')
+        (pos.prev.cssClass == 'user_on_target')
           ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
           : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
 
@@ -73,7 +73,7 @@ class MoveSvc {
       case 'move':
         if (pos.next.stepable) {
           AppSvc.rememberLastStep();
-          (pos.prev.constructor.name == 'UserOnTarget')
+          (pos.prev.cssClass == 'user_on_target')
             ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
             : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
 
