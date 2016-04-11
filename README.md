@@ -19,12 +19,70 @@
   <li><strong>JS-OOP</strong> in prototype style</li>
 </ul>
 
-<h4>Prototype chains</h4>
+<h4>Prototype inheritance chains</h4>
 ```
 Cell -> Box   -> FilledTarget
 Cell -> Wall  -> Concrete
 Cell -> Floor -> Target
 Cell -> Floor -> User    -> UserOnTarget
+```
+
+<h4>Code examples:</h4>
+```
+class User extends Floor {
+  constructor(x, y) {
+    super(x, y);
+    this.letter = '@';
+    this.cssClass = 'user';
+    this.setUserPosition();
+    if (flag.get('user can move')) {
+      this.renewView();
+    }
+  }
+  setUserPosition() {
+    game.userPos = {
+      x: this.x,
+      y: this.y
+    };
+  }
+}
+```
+```
+class Cell {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  };
+  getHTML() {
+    let html = `<div class="_cell ${this.cssClass}" id="c${this.x}x${this.y}"></div>`;
+    return html;
+  };
+  renewView() {
+    View.renewCell(this.x,this.y,this.cssClass);
+  };
+}
+```
+```
+game = Object.create(null);
+Object.defineProperty(game, 'targetsUnfilled', {
+  get: function () {
+    return this.targetsUnfilledValue;
+  },
+  set: function (newValue) {
+    this.targetsUnfilledValue = newValue;
+    document.getElementById("targetsUnfilled").value = newValue;
+    if (flag.get('first step done')) {
+      if (newValue === 0) {
+        AppSvc.nextLevel();
+      }
+    }
+  }
+});
+```
+```
+(localStorage.getItem("passedLevels"))
+  ? game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"))
+  : localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
 ```
 
 <h4>Grunt processing:</h4>
