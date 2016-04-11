@@ -32,7 +32,6 @@ class AppSvc {
 
   static hashUpdate() {
     if (flag.get('hashUpdateBlock') === false) {
-      console.log("flag.get('hashUpdateBlock') =", flag.get('hashUpdateBlock'));
       let level = window.location.hash.split('#level');
       game.currentLevel = level[1];
       View.buildLevelList();
@@ -62,25 +61,31 @@ class AppSvc {
 
   static rememberLastStep(){
     view.lastStep.unblock();
+    view.restart.unblock();
     game.lastStep[game.steps] = Object.create(null);
     game.lastStep[game.steps].emap = Object.assign({}, emap);
     game.lastStep[game.steps].targetsUnfilled = game.targetsUnfilled;
     game.lastStep[game.steps].steps = game.steps;
+    if (game.lastStep[+game.steps - 20]){
+      delete game.lastStep[+game.steps - 20];
+    }
+    View.countOfLastSteps();
   }
 
   static restoreLastStep(){
     let lastStep = +game.steps - 1;
-    console.log("qazwsx");
-    console.log("game.lastStep[lastStep] =", game.lastStep[lastStep]);
 
     emap = game.lastStep[lastStep].emap;
     game.targetsUnfilled = game.lastStep[lastStep].targetsUnfilled;
     game.steps = game.lastStep[lastStep].steps;
     MapSvc.restoreMap();
     delete game.lastStep[lastStep];
-    if(!game.lastStep[0]){
+
+    if(countOfOject(game.lastStep) == 0){
       view.lastStep.block();
     }
+    View.countOfLastSteps();
+
   }
 
 }

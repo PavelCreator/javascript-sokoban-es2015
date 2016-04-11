@@ -26,10 +26,11 @@
             <img src="dist/images/mouse.png" alt="Mouse control"></p>
           <p>The objective of the Sokoban game is <span class="emphasize">to move boxes</span> -
             <span class="box soko-cells"></span> to marked locations -
-            <span class="target soko-cells"></span> by pushing them.</p>
+            <span class="target soko-cells"></span> by pushing them</p>
           <p>The level is passed when <span class="emphasize">all boxes</span> are located at the marked locations -
             <span class="box_on_target soko-cells"></span></p>
           <p>Current level and your best results is <span class="emphasize">stored <i class="fa fa-database"></i></span> in the browser</p>
+          <p>You can <span class="emphasize">restore <i class="fa fa-undo" aria-hidden="true"></i></span> the last 20 steps</p>
           <p></p>
           <p class="emphasize modal-title tac">Enjoy using! <i class="fa fa-smile-o"></i></p>
         </div>
@@ -67,8 +68,8 @@
           <select class="form-control level-list fa-select" id="level-list"></select>
           <button class="btn btn-default btn-color2 btn-margin ml-3" id="restart" disabled>RESTART <i class="fa fa-refresh"></i>
           </button>
-          <button class="btn btn-default btn-color2 btn-margin ml3" id="undo_last_step" disabled>UNDO STEP
-            <i class="fa fa-reply"></i></i>
+          <button class="btn btn-default btn-color2 btn-margin ml3" id="undo_last_step" disabled>UNDO STEP <i class="fa fa-undo" aria-hidden="true"></i></i>
+            <span id="countOfLastSteps">(0)</span>
           </button>
         </p>
       </div>

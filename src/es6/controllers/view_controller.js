@@ -23,6 +23,10 @@ class View {
     }
     document.getElementById('level-list').innerHTML = levelList;
   }
+
+  static countOfLastSteps(){
+    document.getElementById('countOfLastSteps').innerHTML = '('+countOfOject(game.lastStep)+')';
+  }
 }
 View.prototype.modalContent = {
   welcome(){
@@ -42,10 +46,16 @@ View.prototype.modalContent = {
 View.prototype.lastStep = {
   block(){
     document.getElementById('undo_last_step').disabled = true;
-    document.getElementById('restart').disabled = true;
   },
   unblock(){
     document.getElementById('undo_last_step').disabled = false;
+  }
+}
+View.prototype.restart = {
+  block(){
+    document.getElementById('restart').disabled = true;
+  },
+  unblock(){
     document.getElementById('restart').disabled = false;
   }
 }

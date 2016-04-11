@@ -36,6 +36,7 @@ class Events {
     document.getElementById('restart').onclick = () => {
       MapSvc.generateMap(game.currentLevel);
       view.lastStep.block();
+      view.restart.block();
       document.getElementById('hidden').focus();
     };
     document.getElementById('undo_last_step').onclick = () => {
@@ -65,7 +66,6 @@ class Events {
     };
 
     map.onmousedown = function (event) {
-      console.log("qazwsx");
       let cells = document.getElementsByClassName('_cell')
       for (var i = 0; i < cells.length; i++) {
         cells[i].onmouseenter = function (event) {

@@ -38,6 +38,7 @@ Object.defineProperty(game, 'currentLevel', {
     view.lastStep.block();
     View.levelNumView(mapNum);
     MapSvc.generateMap(mapNum);
+    View.countOfLastSteps();
   },
   configurable: true
 });

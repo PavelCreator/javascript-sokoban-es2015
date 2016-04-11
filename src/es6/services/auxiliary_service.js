@@ -1,6 +1,4 @@
-logger = function () {
-};
-classFnc = {
+let classFnc = {
   add: function (o, c) {
     var re = new RegExp("(^|\\s)" + c + "(\\s|$)", "g")
     if (re.test(o.className)) return
@@ -11,7 +9,7 @@ classFnc = {
     o.className = o.className.replace(re, "$1").replace(/\s+/g, " ").replace(/(^ | $)/g, "")
   }
 };
-addEvent = function (object, type, callback) {
+function addEvent (object, type, callback) {
   if (object == null || typeof(object) == 'undefined') return;
   if (object.addEventListener) {
     object.addEventListener(type, callback, false);
@@ -40,4 +38,11 @@ function print_r(arr, level) {
 
     else  print_red_text = "===>"+arr+"<===("+typeof(arr)+")";
     return print_red_text;
+}
+function countOfOject(obj) {
+  var t = typeof(obj);
+  var i = 0;
+  if (t != "object" || obj == null) return 0;
+  for (let x in obj) i++;
+  return i;
 }

@@ -90,7 +90,6 @@ class MoveSvc {
               : emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y))
           game.steps++;
         } else {
-          console.log('blocked');
         }
         break;
 
