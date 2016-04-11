@@ -16,7 +16,8 @@
   <li>Project written on Vanilla JS <strong>without jQuery</strong></li>
   <li>The system is collected automatically using <strong>npm</strong></li>
   <li>Auto deploy using <strong>Grunt</strong></li>
-  <li><strong>JS-OOP</strong> in prototype style</li>
+  <li>JS-OOP in <strong>prototype</strong> style</li>
+  <li>9 entities, 2 controllers, 5 services and 2 storages</li>
 </ul>
 
 <h4>Prototype inheritance chains</h4>
@@ -87,7 +88,6 @@ class Cell {
 let [x,y] = coordinatesArr;
 ```
 
-
 <h4>Grunt processing:</h4>
 <ul>
   <li><strong>ES2015</strong> - collected from the files pack, minimized, unglifyed and processed with Babel</li>
@@ -99,8 +99,6 @@ let [x,y] = coordinatesArr;
 
 <h4>Deploy:</h4>
 <ul>
-<li>1) install all node modules. Enter in console:
-<strong>npm install</strong></li>
-<li>2) make build
-<br><strong>grunt</strong> - to generate ES2015 build
+<li>1) install all node modules. Enter in console: <strong>npm install</strong></li>
+<li>2) make build. Enter in console: <strong>grunt</strong>
 </ul>
