@@ -7,7 +7,6 @@ class User extends Floor {
     if (flag.get('user can move')) {
       this.renewView();
     }
-
   }
 
   setUserPosition() {

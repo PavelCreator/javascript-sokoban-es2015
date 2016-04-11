@@ -27,8 +27,8 @@ module.exports = {
     tasks: [
       'concat:es6',
       'browserify',
-      'copy:es6'
-      /*'uglify:es6'*/
+      'copy:es6',
+      'uglify:es6'
     ]
   },
   img: {

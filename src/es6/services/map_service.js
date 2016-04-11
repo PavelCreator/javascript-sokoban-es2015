@@ -16,6 +16,7 @@ class MapSvc {
     setTimeout(function () {
       flag.set('hashUpdateBlock',false);
     }, 200);
+    view.restart.block();
 
     AppSvc.resetLevel();
     var xhr = new XMLHttpRequest();
