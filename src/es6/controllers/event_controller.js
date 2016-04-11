@@ -38,6 +38,7 @@ class Events {
       view.lastStep.block();
       view.restart.block();
       document.getElementById('hidden').focus();
+      View.countOfLastSteps();
     };
     document.getElementById('undo_last_step').onclick = () => {
       AppSvc.restoreLastStep();
