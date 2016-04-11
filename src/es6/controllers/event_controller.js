@@ -44,6 +44,15 @@ class Events {
     };
   };
 
+  static hashChange(){
+    if ('onhashchange' in window){
+      addEvent(window, 'hashchange', AppSvc.hashUpdate);
+    }
+    else {
+      checkInterval = setInterval(AppSvc.hashUpdate, 200);
+    }
+  }
+
   static resizeEvent() {
     addEvent(window, "resize", function (event) {
     });
@@ -52,6 +61,7 @@ class Events {
   static read() {
     this.keypress();
     this.uiPress();
+    this.hashChange();
     events.modalLogic.watchers();
   };
 }

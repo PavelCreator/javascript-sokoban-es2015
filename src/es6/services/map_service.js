@@ -12,6 +12,7 @@ class MapSvc {
 
   static generateMap(mapNum) {
     AppSvc.resetLevel();
+    AppSvc.changeURL(mapNum);
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', `src/maps/${mapNum}.txt`, true);

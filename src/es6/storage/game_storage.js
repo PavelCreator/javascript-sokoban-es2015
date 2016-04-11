@@ -14,13 +14,14 @@ Object.defineProperty(game, 'steps', {
 });
 Object.defineProperty(game, 'targetsUnfilled', {
   get: function () {
-    return document.getElementById("targetsUnfilled").value
+    return this.targetsUnfilledValue;
   },
   set: function (newValue) {
+    this.targetsUnfilledValue = newValue;
     document.getElementById("targetsUnfilled").value = newValue;
     if (flag.get('first step done')) {
       if (newValue === 0) {
-        AppSvc.gameOver();
+        AppSvc.nextLevel();
       }
     }
   },
@@ -32,7 +33,7 @@ game.modalContent = {
     document.getElementById('modal-new-level').hidden = true;
   },
   nextlevel(){
-    let currentLevel = document.getElementById('level-list').value;
+    let currentLevel = game.currentLevel;
     document.getElementById('modal-welcome').hidden = true;
     document.getElementById('modal-new-level').hidden = false;
   }
@@ -46,7 +47,16 @@ Object.defineProperty(game, 'currentLevel', {
     View.levelNumView(mapNum);
     MapSvc.generateMap(mapNum);
     this.currentLevelValue = mapNum;
-    console.log(game.currentLevel);
   },
   configurable: true
 });
+
+game.passed_levels = Object.create(null);
+for (var i = 1; i <= 60; i++) {
+  game.passed_levels['L'+i] = false;
+}
+if (localStorage.getItem("passed_levels")) {
+  game.passed_levels = JSON.parse(localStorage.getItem("passed_levels"));
+} else {
+  localStorage.setItem("passed_levels", JSON.stringify(game.passed_levels));
+}

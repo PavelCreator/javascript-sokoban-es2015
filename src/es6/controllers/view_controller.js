@@ -12,8 +12,12 @@ class View {
     let currentLevel = game.currentLevel;
     for (var i = 1; i <= 60; i++){
       (i == currentLevel)
-      ? levelList += `<option value="${i}" selected>${i}</option>`
-    	: levelList += `<option value="${i}">${i}</option>`;
+      ? (game.passed_levels['L'+i])
+        ? levelList += `<option value="${i}" selected class="fa-select green">${i} &#xf05d; (${game.passed_levels['L'+i]})</option>`
+        : levelList += `<option value="${i}" selected>${i}</option>`
+    	: (game.passed_levels['L'+i])
+        ? levelList += `<option value="${i}" class="fa-select green">${i} &#xf05d; (${game.passed_levels['L'+i]})</option>`
+        : levelList += `<option value="${i}">${i}</option>`;
     }
     document.getElementById('level-list').innerHTML = levelList;
   }
