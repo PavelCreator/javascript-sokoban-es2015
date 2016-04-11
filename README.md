@@ -28,7 +28,28 @@ Cell -> Floor -> User    -> UserOnTarget
 ```
 
 <h4>Code examples:</h4>
+```javascript
+game = Object.create(null);
+Object.defineProperty(game, 'currentLevel', {
+  get: function () {
+    return this.currentLevelValue;
+  },
+  set: function (mapNum) {
+    this.currentLevelValue = mapNum;
+    localStorage.setItem("level", mapNum);
+    MapSvc.generateMap(mapNum);
+    view.lastStep.block();
+    View.levelNumView(mapNum);
+    View.countOfLastSteps();
+  }
+});
 ```
+```javascript
+(localStorage.getItem("passedLevels"))
+  ? game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"))
+  : localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
+```
+```javascript
 class User extends Floor {
   constructor(x, y) {
     super(x, y);
@@ -47,7 +68,7 @@ class User extends Floor {
   }
 }
 ```
-```
+```javascript
 class Cell {
   constructor(x, y) {
     this.x = x;
@@ -61,28 +82,6 @@ class Cell {
     View.renewCell(this.x,this.y,this.cssClass);
   };
 }
-```
-```
-game = Object.create(null);
-Object.defineProperty(game, 'targetsUnfilled', {
-  get: function () {
-    return this.targetsUnfilledValue;
-  },
-  set: function (newValue) {
-    this.targetsUnfilledValue = newValue;
-    document.getElementById("targetsUnfilled").value = newValue;
-    if (flag.get('first step done')) {
-      if (newValue === 0) {
-        AppSvc.nextLevel();
-      }
-    }
-  }
-});
-```
-```
-(localStorage.getItem("passedLevels"))
-  ? game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"))
-  : localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
 ```
 
 <h4>Grunt processing:</h4>
