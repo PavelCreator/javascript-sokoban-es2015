@@ -72,6 +72,7 @@ class MoveSvc {
 
       case 'move':
         if (pos.next.stepable) {
+          AppSvc.rememberLastStep();
           (pos.prev.constructor.name == 'UserOnTarget')
             ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
             : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);
@@ -89,7 +90,6 @@ class MoveSvc {
               ? emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y, true)
               : emap[`c${pos.next.x}x${pos.next.y}`] = new Box(pos.next.x, pos.next.y))
           game.steps++;
-        } else {
         }
         break;
 
