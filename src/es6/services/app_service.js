@@ -5,6 +5,7 @@ class AppSvc {
     flag.set('user can move', false);
     game.targetsUnfilled = 0;
     game.steps = 0;
+    game.lastStep = Object.create(null);
     emap = Object.create(null);
   }
 
@@ -19,9 +20,9 @@ class AppSvc {
   }
 
   static renewPassedLevels() {
-    if ((+game.passed_levels['L' + game.currentLevel] > +game.steps) || (!game.passed_levels['L' + game.currentLevel])) {
-      game.passed_levels['L' + game.currentLevel] = +game.steps + 1;
-      localStorage.setItem("passed_levels", JSON.stringify(game.passed_levels));
+    if ((+game.passedLevels['L' + game.currentLevel] > +game.steps) || (!game.passedLevels['L' + game.currentLevel])) {
+      game.passedLevels['L' + game.currentLevel] = +game.steps + 1;
+      localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
     }
   }
 
@@ -55,4 +56,28 @@ class AppSvc {
       }
     }
   }
+
+  static rememberLastStep(){
+    view.lastStep.unblock();
+    game.lastStep[game.steps] = Object.create(null);
+    game.lastStep[game.steps].emap = Object.assign({}, emap);
+    game.lastStep[game.steps].targetsUnfilled = game.targetsUnfilled;
+    game.lastStep[game.steps].steps = game.steps;
+  }
+
+  static restoreLastStep(){
+    let lastStep = +game.steps - 1;
+    console.log("qazwsx");
+    console.log("game.lastStep[lastStep] =", game.lastStep[lastStep]);
+
+    emap = game.lastStep[lastStep].emap;
+    game.targetsUnfilled = game.lastStep[lastStep].targetsUnfilled;
+    game.steps = game.lastStep[lastStep].steps;
+    MapSvc.restoreMap();
+    delete game.lastStep[lastStep];
+    if(!game.lastStep[0]){
+      view.lastStep.block();
+    }
+  }
+
 }

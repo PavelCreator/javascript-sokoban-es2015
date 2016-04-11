@@ -4,6 +4,7 @@ class Floor extends Cell{
     this.stepable = true;
     this.movable = false;
     this.targetable = false;
+    this.letter = ' ';
     this.cssClass = 'floor';
 
     if (flag.get('user can move')) {

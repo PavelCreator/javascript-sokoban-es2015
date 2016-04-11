@@ -19,14 +19,11 @@
         <div id="modal-welcome">
           <h3 class="modal-title tac">Welcome to ES2015 Sokoban</h3>
           <p></p>
-          <p>The game is controlled with the <span class="emphasize">keyboard <i class="fa fa-keyboard-o"></i></span> -
-            use
-            keys
-            <i class="fa fa-caret-square-o-up"></i>
-            <i class="fa fa-caret-square-o-right"></i>
-            <i class="fa fa-caret-square-o-down"></i>
-            <i class="fa fa-caret-square-o-left"></i>
+          <p class="tac">The game is controlled with the <span class="emphasize">keyboard <i class="fa fa-keyboard-o"></i></span>
+            or <span class="emphasize">mouse <i class="fa fa-mouse-pointer"></i></span>
           </p>
+          <p class="tac"><img src="dist/images/keys.png" alt="Keyboard control">
+            <img src="dist/images/mouse.png" alt="Mouse control"></p>
           <p>The objective of the Sokoban game is <span class="emphasize">to move boxes</span> -
             <span class="box soko-cells"></span> to marked locations -
             <span class="target soko-cells"></span> by pushing them.</p>
@@ -61,14 +58,17 @@
           <input type='text' id='steps' name='form-control' class="form-control wide-input-2" disabled>
           <label for="targetsUnfilled">Targets unfilled: </label>
           <input type='text' id='targetsUnfilled' name='steps' class="form-control wide-input" disabled>
+          <button class="btn btn-default btn-color2 btn-margin btn-margin-2" id="openModal">FAQ
+            <i class="fa fa-info-circle"></i>
+          </button>
         </p>
         <p>
           <label for="choose_level">Choose level: </label>
           <select class="form-control level-list fa-select" id="level-list"></select>
-          <button class="btn btn-default btn-color2 btn-margin" id="restart">RESTART <i class="fa fa-refresh"></i>
+          <button class="btn btn-default btn-color2 btn-margin ml-3" id="restart" disabled>RESTART <i class="fa fa-refresh"></i>
           </button>
-          <button class="btn btn-default btn-color2 btn-margin" id="openModal">HOW TO PLAY
-            <i class="fa fa-info-circle"></i>
+          <button class="btn btn-default btn-color2 btn-margin ml3" id="undo_last_step" disabled>UNDO STEP
+            <i class="fa fa-reply"></i></i>
           </button>
         </p>
       </div>

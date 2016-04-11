@@ -1,5 +1,5 @@
 class EntitySvc {
-  static createEntity(letter, x, y) {
+  static createEntity(letter, x, y, restore) {
     let entity;
     switch (letter) {
       case 'c':
@@ -15,7 +15,9 @@ class EntitySvc {
         break;
 
       case '.':
-        entity = new Target(x, y);
+        (restore)
+          ? entity = new Target(x, y, 'unfilled')
+          : entity = new Target(x, y);
         break;
 
       case '@':

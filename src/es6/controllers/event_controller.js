@@ -35,7 +35,11 @@ class Events {
     };
     document.getElementById('restart').onclick = () => {
       MapSvc.generateMap(game.currentLevel);
+      view.lastStep.block();
       document.getElementById('hidden').focus();
+    };
+    document.getElementById('undo_last_step').onclick = () => {
+      AppSvc.restoreLastStep();
     };
     document.getElementById('go-to-next-level').onclick = () => {
       game.currentLevel++;
@@ -61,6 +65,7 @@ class Events {
     };
 
     map.onmousedown = function (event) {
+      console.log("qazwsx");
       let cells = document.getElementsByClassName('_cell')
       for (var i = 0; i < cells.length; i++){
       	cells[i].onmouseenter = function(event){
@@ -76,9 +81,9 @@ class Events {
       }
     }
 
-    /*    document.getElementById('map').onclick = function (event) {
-     AppSvc.mouseEvent(event.target.getAttribute('id'));
-     }*/
+    document.getElementById('map').onclick = function (event) {
+      AppSvc.mouseEvent(event.target.getAttribute('id'));
+    }
   }
 
   static read() {
@@ -95,7 +100,6 @@ Events.prototype.modalLogic = {
       events.modalLogic.openModal();
     }
     document.getElementById("closeModal").onclick = () => {
-      console.log("qazwsx");
       events.modalLogic.closeModal();
     }
     window.onclick = (event) => {
@@ -106,8 +110,8 @@ Events.prototype.modalLogic = {
   },
   openModal(nextlevel) {
     (nextlevel)
-      ? game.modalContent.nextlevel()
-      : game.modalContent.welcome();
+      ? view.modalContent.nextlevel()
+      : view.modalContent.welcome();
     document.getElementById('modalWrapper').style.display = "flex";
     document.getElementsByTagName("html")[0].style.overflow = "hidden";
   },

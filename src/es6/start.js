@@ -5,7 +5,7 @@
 View.buildLevelList();
 
 if (!localStorage.getItem("firstTime")) {
-  game.modalContent.welcome();
+  view.modalContent.welcome();
   events.modalLogic.openModal();
   localStorage.setItem('firstTime', 'true');
 }

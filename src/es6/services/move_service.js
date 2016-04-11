@@ -57,6 +57,8 @@ class MoveSvc {
     /*console.log('begin',action,print_r(pos));*/
     switch (action) {
       case 'go':
+        AppSvc.rememberLastStep();
+
         (pos.prev.constructor.name == 'UserOnTarget')
           ? emap[`c${pos.prev.x}x${pos.prev.y}`] = new Target(pos.prev.x, pos.prev.y, true)
           : emap[`c${pos.prev.x}x${pos.prev.y}`] = new Floor(pos.prev.x, pos.prev.y);

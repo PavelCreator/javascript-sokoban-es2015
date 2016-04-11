@@ -29,8 +29,14 @@ class MapSvc {
       let mapArr = map.split('\r\n');
 
       mapArr = MapSvc.generateCString(mapArr);
+      document.getElementById('map').style.width = (30*mapArr[0].length + 60) + 'px';
+/*      document.getElementById('map').style.width = (+document.getElementById('map').offsetWidth + 20) + 'px';*/
 
       let html = '';
+
+      game.dimensions.y = mapArr.length - 1;
+      game.dimensions.x = mapArr[0].length + 1;
+
       for (var y = 0; y < mapArr.length; y++) {
         html += '<div class="_row">';
         mapArr[y] = 'c' + mapArr[y] + 'c';
@@ -43,5 +49,18 @@ class MapSvc {
       document.getElementById('map').innerHTML = html;
       AppSvc.runApp();
     }
+  }
+
+  static restoreMap(){
+    let html = '';
+    for (var y = 0; y <= game.dimensions.y; y++) {
+      html += '<div class="_row">';
+      for (var x = 0; x <= game.dimensions.x; x++) {
+        EntitySvc.createEntity(emap[`c${x}x${y}`].letter, x, y, 'restore');
+        html += emap[`c${x}x${y}`].getHTML();
+      }
+      html += '</div>';
+    }
+    document.getElementById('map').innerHTML = html;
   }
 }

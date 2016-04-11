@@ -5,6 +5,7 @@ class Box extends Cell {
     this.movable = true;
     this.targetable = false;
     this.cssClass = 'box';
+    this.letter = '*';
     if (unfilled) {
       game.targetsUnfilled++;
     }

@@ -2,6 +2,7 @@ class Target extends Floor {
   constructor(x, y, unfilled) {
     super(x, y);
     this.targetable = true;
+    this.letter = '.';
     this.cssClass = 'target';
     if (!unfilled) {
       game.targetsUnfilled++;

@@ -4,6 +4,7 @@ class Wall extends Cell{
     this.stepable = false;
     this.movable = false;
     this.targetable = false;
+    this.letter = 'X';
     this.cssClass = 'wall';
   }
 }

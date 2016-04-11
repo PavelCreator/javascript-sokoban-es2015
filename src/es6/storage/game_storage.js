@@ -2,9 +2,10 @@ game = Object.create(null);
 game.userPos = Object.create(null);
 Object.defineProperty(game, 'steps', {
   get: function () {
-    return document.getElementById("steps").value
+    return this.stepsValue;
   },
   set: function (newValue) {
+    this.stepsValue = newValue;
     document.getElementById("steps").value = newValue;
     if (!flag.get('first step done')) {
       flag.set('first step done', true);
@@ -27,17 +28,6 @@ Object.defineProperty(game, 'targetsUnfilled', {
   },
   configurable: true
 });
-game.modalContent = {
-  welcome(){
-    document.getElementById('modal-welcome').hidden = false;
-    document.getElementById('modal-new-level').hidden = true;
-  },
-  nextlevel(){
-    let currentLevel = game.currentLevel;
-    document.getElementById('modal-welcome').hidden = true;
-    document.getElementById('modal-new-level').hidden = false;
-  }
-}
 Object.defineProperty(game, 'currentLevel', {
   get: function () {
     return this.currentLevelValue;
@@ -51,12 +41,14 @@ Object.defineProperty(game, 'currentLevel', {
   configurable: true
 });
 
-game.passed_levels = Object.create(null);
+game.passedLevels = Object.create(null);
 for (var i = 1; i <= 60; i++) {
-  game.passed_levels['L'+i] = false;
+  game.passedLevels['L'+i] = false;
 }
-if (localStorage.getItem("passed_levels")) {
-  game.passed_levels = JSON.parse(localStorage.getItem("passed_levels"));
+if (localStorage.getItem("passedLevels")) {
+  game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"));
 } else {
-  localStorage.setItem("passed_levels", JSON.stringify(game.passed_levels));
+  localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
 }
+game.lastStep = Object.create(null);
+game.dimensions = Object.create(null);

@@ -10,6 +10,9 @@ body{
 body *{
   outline:none !important;
   font-family:'Coda', cursive;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
 }
 .header{
   text-align:center;
@@ -18,6 +21,7 @@ body *{
 .title{
   font-size:37px;
   margin-bottom:-3px;
+  margin-top:0;
 }
 .author{
   font-size:19px;
@@ -38,8 +42,6 @@ body *{
   background:-webkit-linear-gradient(left, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* Chrome10-25,Safari5.1-6 */
   background:linear-gradient(to right, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbcbc', endColorstr='#bcbcbc', GradientType=1); /* IE6-9 */
-}
-.map{
 }
 ._row{
   display:block;
@@ -109,7 +111,7 @@ body *{
   }
   select.level-list{ @extend .input-margin;
     display:inline-block;
-    width:70px;
+    width:120px;
   }
 }
 ._link{
@@ -119,6 +121,12 @@ body *{
   font-weight:bold;
   position:relative;
   top:-2px;
+}
+.btn-margin-2{
+  margin-left:-7px;
+}
+.btn-margin-3{
+  margin-left:3px;
 }
 /*Modal*/
 .modal{
