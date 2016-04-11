@@ -31,6 +31,10 @@ class EntitySvc {
       case '&':
         entity = new FilledTarget(x, y, 'filled');
         break;
+
+      case '%':
+        entity = new UserOnTarget(x, y, 'filled');
+        break;
     }
     emap[`c${x}x${y}`] = entity;
   }

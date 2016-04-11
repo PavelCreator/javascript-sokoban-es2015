@@ -67,8 +67,8 @@ class Events {
     map.onmousedown = function (event) {
       console.log("qazwsx");
       let cells = document.getElementsByClassName('_cell')
-      for (var i = 0; i < cells.length; i++){
-      	cells[i].onmouseenter = function(event){
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].onmouseenter = function (event) {
           AppSvc.mouseEvent(event.target.getAttribute('id'));
         };
       }
@@ -104,7 +104,9 @@ Events.prototype.modalLogic = {
     }
     window.onclick = (event) => {
       if (event.target == document.getElementById('modalWrapper')) {
-        events.modalLogic.closeModal();
+        if (flag.get('modal mode') === 'welcome') {
+          events.modalLogic.closeModal();
+        }
       }
     }
   },

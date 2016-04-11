@@ -11,9 +11,13 @@ class MapSvc {
   }
 
   static generateMap(mapNum) {
-    AppSvc.resetLevel();
+    flag.set('hashUpdateBlock',true);
     AppSvc.changeURL(mapNum);
+    setTimeout(function () {
+      flag.set('hashUpdateBlock',false);
+    }, 200);
 
+    AppSvc.resetLevel();
     var xhr = new XMLHttpRequest();
     xhr.open('GET', `src/maps/${mapNum}.txt`, true);
     xhr.send();

@@ -31,9 +31,12 @@ class AppSvc {
   }
 
   static hashUpdate() {
-    let level = window.location.hash.split('#level');
-    game.currentLevel = level[1];
-    View.buildLevelList();
+    if (flag.get('hashUpdateBlock') === false) {
+      console.log("flag.get('hashUpdateBlock') =", flag.get('hashUpdateBlock'));
+      let level = window.location.hash.split('#level');
+      game.currentLevel = level[1];
+      View.buildLevelList();
+    }
   }
 
   static mouseEvent(id) {

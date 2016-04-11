@@ -26,11 +26,15 @@ class View {
 }
 View.prototype.modalContent = {
   welcome(){
+    flag.set('modal mode','welcome');
+    document.getElementById('closeModal').hidden = false;
     document.getElementById('modal-welcome').hidden = false;
     document.getElementById('modal-new-level').hidden = true;
   },
   nextlevel(){
+    flag.set('modal mode','nextlevel');
     let currentLevel = game.currentLevel;
+    document.getElementById('closeModal').hidden = true;
     document.getElementById('modal-welcome').hidden = true;
     document.getElementById('modal-new-level').hidden = false;
   }
