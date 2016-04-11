@@ -8,7 +8,7 @@
   <li>Completed levels and user results are <strong>stored</strong> in LocalStorage and <strong>displayed</strong> in the list of levels</li>
   <li>User can <strong>restore</strong> the last 20 steps</li>
   <li><strong>Routing</strong> is tied to levels, navigation by hash</li>
-  <li><strong>Сounting steps</strong></li>
+  <li>Сounting steps</li>
 </ul>
 
 <h3>Programming:</h3>
