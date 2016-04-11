@@ -29,7 +29,7 @@ Cell -> Floor -> User    -> UserOnTarget
 
 <h4>Code examples:</h4>
 ```javascript
-game = Object.create(null);
+let game = Object.create(null);
 Object.defineProperty(game, 'currentLevel', {
   get: function () {
     return this.currentLevelValue;
@@ -83,6 +83,10 @@ class Cell {
   };
 }
 ```
+```javascript
+let [x,y] = coordinatesArr;
+```
+
 
 <h4>Grunt processing:</h4>
 <ul>
