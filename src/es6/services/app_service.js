@@ -59,6 +59,7 @@ class AppSvc {
     }
   }
 
+
   static rememberLastStep(){
     view.lastStep.unblock();
     view.restart.unblock();
