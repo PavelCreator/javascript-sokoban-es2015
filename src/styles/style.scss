@@ -103,6 +103,9 @@ body *{
     &.wide-input{
       width:50px;
     }
+    &.wide-input-2{
+      width:70px;
+    }
   }
   select.level-list{ @extend .input-margin;
     display:inline-block;
@@ -201,4 +204,16 @@ body *{
 }
 .fa-select {
     font-family: sans-serif, 'FontAwesome';
+}
+._cell{
+  position:relative;
+  z-index:5;
+}
+._row{
+  position:relative;
+  z-index:4;
+}
+#map{
+  position:relative;
+  z-index:3;
 }

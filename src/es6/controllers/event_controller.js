@@ -44,8 +44,8 @@ class Events {
     };
   };
 
-  static hashChange(){
-    if ('onhashchange' in window){
+  static hashChange() {
+    if ('onhashchange' in window) {
       addEvent(window, 'hashchange', AppSvc.hashUpdate);
     }
     else {
@@ -53,15 +53,39 @@ class Events {
     }
   }
 
-  static resizeEvent() {
-    addEvent(window, "resize", function (event) {
-    });
-  };
+  static mouseClickInCell() {
+    let map = document.getElementById('map');
+
+    map.ondragstart = function () {
+      return false;
+    };
+
+    map.onmousedown = function (event) {
+      let cells = document.getElementsByClassName('_cell')
+      for (var i = 0; i < cells.length; i++){
+      	cells[i].onmouseenter = function(event){
+          AppSvc.mouseEvent(event.target.getAttribute('id'));
+        };
+      }
+      map.onmouseup = function () {
+        document.onmousemove = null;
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].onmouseenter = null;
+        }
+        map.onmouseup = null;
+      }
+    }
+
+    /*    document.getElementById('map').onclick = function (event) {
+     AppSvc.mouseEvent(event.target.getAttribute('id'));
+     }*/
+  }
 
   static read() {
     this.keypress();
     this.uiPress();
     this.hashChange();
+    this.mouseClickInCell();
     events.modalLogic.watchers();
   };
 }

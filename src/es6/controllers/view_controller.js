@@ -5,7 +5,7 @@ class View {
     document.getElementById("modal-level--next").innerHTML = +mapNum + 1;
   }
   static renewCell(x,y,cssClass){
-    document.getElementById(`c${x}x${y}`).className = cssClass;
+    document.getElementById(`c${x}x${y}`).className = '_cell '+cssClass;
   }
   static buildLevelList(){
     let levelList;

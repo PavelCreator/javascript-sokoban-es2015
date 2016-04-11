@@ -5,7 +5,7 @@ class Cell {
   };
 
   getHTML() {
-    let html = `<div class="${this.cssClass}" id="c${this.x}x${this.y}"></div>`;
+    let html = `<div class="_cell ${this.cssClass}" id="c${this.x}x${this.y}"></div>`;
     return html;
   };
 
