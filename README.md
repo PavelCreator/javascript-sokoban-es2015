@@ -19,6 +19,14 @@
   <li><strong>JS-OOP</strong> in prototype style</li>
 </ul>
 
+<h4>Prototype chains</h4>
+```
+Cell -> Box   -> FilledTarget
+Cell -> Wall  -> Concrete
+Cell -> Floor -> Target
+Cell -> Floor -> User    -> UserOnTarget
+```
+
 <h4>Grunt processing:</h4>
 <ul>
   <li><strong>ES2015</strong> - collected from the files pack, minimized, unglifyed and processed with Babel</li>
