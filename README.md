@@ -1,6 +1,10 @@
 <h1>JavaScript demo of skills (ES2015, Grunt, npm, OOP in prototype style)</h1>
 <h3>Sokoban is a type of transport puzzle, in which the player pushes boxes or crates around in a warehouse, trying to get them to storage locations.</h3>
 <h3><a href="http://melomance.net/sokoban/">Full demo</a></h3>
+
+<img src="http://melomance.net/sokoban/dist/images/sokoban.jpg" 
+alt="Online sokoban" width="761" height="428" border="10" />
+
 <h3>Functionality:</h3>
 <ul>
   <li>Online implementation of <strong>Sokoban original game</strong> (1982) with <strong>60 levels</strong></li>
