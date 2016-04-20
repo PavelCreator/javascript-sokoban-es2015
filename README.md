@@ -3,7 +3,7 @@
 <h3><a href="http://melomance.net/sokoban/">Full demo</a></h3>
 
 <img src="http://melomance.net/sokoban/dist/images/sokoban.jpg" 
-alt="Online sokoban" width="761" height="428" border="10" />
+alt="Online sokoban" border="10" />
 
 <h3>Functionality:</h3>
 <ul>
