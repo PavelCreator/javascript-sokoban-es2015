@@ -10,7 +10,7 @@ alt="Online sokoban" border="10" />
   <li>Online implementation of <strong>Sokoban original game</strong> (1982) with <strong>60 levels</strong></li>
   <li>The game is controlled with the <strong>keyboard</strong> or <strong>mouse</strong></li>
   <li>Completed levels and user results are <strong>stored</strong> in LocalStorage and <strong>displayed</strong> in the list of levels</li>
-  <li>User can <strong>restore</strong> the last 20 steps</li>
+  <li>User can <strong>restore</strong> the last 50 steps</li>
   <li><strong>Routing</strong> is tied to levels, navigation by hash</li>
   <li>Сounting steps</li>
 </ul>
