@@ -11,10 +11,11 @@ class MapSvc {
   }
 
   static generateMap(mapNum) {
-    flag.set('hashUpdateBlock',true);
+    flag.set('last step block', true);
+    flag.set('hash update block', true);
     AppSvc.changeURL(mapNum);
     setTimeout(function () {
-      flag.set('hashUpdateBlock',false);
+      flag.set('hash update block',false);
     }, 200);
     view.restart.block();
 

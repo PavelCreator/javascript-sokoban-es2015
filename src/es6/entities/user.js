@@ -8,7 +8,6 @@ class User extends Floor {
       this.renewView();
     }
   }
-
   setUserPosition() {
     game.userPos = {
       x: this.x,

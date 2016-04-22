@@ -1,2 +1,11 @@
 To deploy project enter in terminal command:
 npm install
+
+To build project enter
+grunt
+
+To watch all sources
+grunt watch
+
+My Hi-Score
+{"L1":276,"L2":519,"L3":368,"L4":893,"L5":462,"L6":310,"L7":373,"L8":659,"L9":664,"L10":2154,"L11":978,"L12":541,"L13":false,"L14":false,"L15":false,"L16":false,"L17":false,"L18":false,"L19":false,"L20":false,"L21":false,"L22":false,"L23":false,"L24":false,"L25":false,"L26":false,"L27":false,"L28":false,"L29":false,"L30":false,"L31":false,"L32":false,"L33":false,"L34":false,"L35":false,"L36":false,"L37":false,"L38":false,"L39":false,"L40":false,"L41":false,"L42":false,"L43":false,"L44":false,"L45":false,"L46":false,"L47":false,"L48":false,"L49":false,"L50":false,"L51":false,"L52":false,"L53":false,"L54":false,"L55":false,"L56":false,"L57":false,"L58":false,"L59":false,"L60":false}

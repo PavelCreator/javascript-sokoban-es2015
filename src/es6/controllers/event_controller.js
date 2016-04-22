@@ -3,6 +3,10 @@ class Events {
     let pressed = (e) => {
       var ctrlDown = e.ctrlKey || e.metaKey
       switch (e.which) {
+        case 96:
+          AppSvc.restoreLastStep();
+          document.getElementById('hidden').focus();
+          break;
         case 38:
         case 104:
           MoveSvc.rememberPosition('up');

@@ -11,8 +11,8 @@ module.exports = {
   es2015: [
     'concat:es6',
     'browserify',
-    'copy:es6'
-    /*'uglify:es6'*/
+    //'copy:es6',
+    'uglify:es6'
   ],
   img: [
     'imagemin'

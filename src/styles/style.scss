@@ -42,7 +42,10 @@ body *{
   background:-webkit-linear-gradient(left, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* Chrome10-25,Safari5.1-6 */
   background:linear-gradient(to right, #bcbcbc 0%, #ededed 25%, #fff 50%, #ededed 75%, #bcbcbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbcbc', endColorstr='#bcbcbc', GradientType=1); /* IE6-9 */
+/*  background-color:#337ab7;
+  color:white;*/
 }
+
 ._row{
   display:block;
   line-height:0;

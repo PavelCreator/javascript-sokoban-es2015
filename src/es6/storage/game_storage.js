@@ -44,10 +44,9 @@ game.passedLevels = Object.create(null);
 for (var i = 1; i <= 60; i++) {
   game.passedLevels['L'+i] = false;
 }
-if (localStorage.getItem("passedLevels")) {
-  game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"));
-} else {
-  localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
-}
+(localStorage.getItem("passedLevels"))
+  ? game.passedLevels = JSON.parse(localStorage.getItem("passedLevels"))
+  : localStorage.setItem("passedLevels", JSON.stringify(game.passedLevels));
+
 game.lastStep = Object.create(null);
 game.dimensions = Object.create(null);

@@ -31,7 +31,7 @@ class AppSvc {
   }
 
   static hashUpdate() {
-    if (flag.get('hashUpdateBlock') === false) {
+    if (flag.get('hash update block') === false) {
       let level = window.location.hash.split('#level');
       game.currentLevel = level[1];
       View.buildLevelList();
@@ -60,6 +60,7 @@ class AppSvc {
   }
 
   static rememberLastStep(){
+    flag.set('last step block', false);
     view.lastStep.unblock();
     view.restart.unblock();
     game.lastStep[game.steps] = Object.create(null);
@@ -67,13 +68,16 @@ class AppSvc {
     game.lastStep[game.steps].emap = copy({}, emap);
     game.lastStep[game.steps].targetsUnfilled = game.targetsUnfilled;
     game.lastStep[game.steps].steps = game.steps;
-    if (game.lastStep[+game.steps - 20]){
-      delete game.lastStep[+game.steps - 20];
+    if (game.lastStep[+game.steps - 50]){
+      delete game.lastStep[+game.steps - 50];
     }
     View.countOfLastSteps();
   }
 
   static restoreLastStep(){
+    if (flag.get('last step block')){
+      return;
+    }
     let lastStep = +game.steps - 1;
 
     emap = game.lastStep[lastStep].emap;
@@ -81,11 +85,11 @@ class AppSvc {
     game.steps = game.lastStep[lastStep].steps;
     MapSvc.restoreMap();
     delete game.lastStep[lastStep];
-
+    View.countOfLastSteps();
     if(countOfOject(game.lastStep) == 0){
+      flag.set('last step block', true);
       view.lastStep.block();
     }
-    View.countOfLastSteps();
 
   }
 
