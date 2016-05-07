@@ -51,6 +51,14 @@ View.prototype.lastStep = {
     document.getElementById('undo_last_step').disabled = false;
   }
 }
+View.prototype.loadStep = {
+  block(){
+    document.getElementById('load').disabled = true;
+  },
+  unblock(){
+    document.getElementById('load').disabled = false;
+  }
+}
 View.prototype.restart = {
   block(){
     document.getElementById('restart').disabled = true;

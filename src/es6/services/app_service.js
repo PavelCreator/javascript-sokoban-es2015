@@ -39,7 +39,7 @@ class AppSvc {
   }
 
   static mouseEvent(id) {
-    if ((id)&&(id!=='map')){
+    if ((id) && (id !== 'map')) {
       let part1 = id.split('c');
       let coordinatesArr = part1[1].split('x');
       let [x,y] = coordinatesArr;
@@ -59,7 +59,7 @@ class AppSvc {
     }
   }
 
-  static rememberLastStep(){
+  static rememberLastStep() {
     flag.set('last step block', false);
     view.lastStep.unblock();
     view.restart.unblock();
@@ -68,14 +68,14 @@ class AppSvc {
     game.lastStep[game.steps].emap = copy({}, emap);
     game.lastStep[game.steps].targetsUnfilled = game.targetsUnfilled;
     game.lastStep[game.steps].steps = game.steps;
-    if (game.lastStep[+game.steps - 50]){
+    if (game.lastStep[+game.steps - 50]) {
       delete game.lastStep[+game.steps - 50];
     }
     View.countOfLastSteps();
   }
 
-  static restoreLastStep(){
-    if (flag.get('last step block')){
+  static restoreLastStep() {
+    if (flag.get('last step block')) {
       return;
     }
     let lastStep = +game.steps - 1;
@@ -86,11 +86,39 @@ class AppSvc {
     MapSvc.restoreMap();
     delete game.lastStep[lastStep];
     View.countOfLastSteps();
-    if(countOfOject(game.lastStep) == 0){
+    if (countOfOject(game.lastStep) == 0) {
       flag.set('last step block', true);
       view.lastStep.block();
     }
 
+  }
+
+  static saveStep() {
+    game.memoryStep = Object.create(null);
+    game.memoryStep.emap = copy({}, emap);
+    game.memoryStep.targetsUnfilled = game.targetsUnfilled;
+    game.memoryStep.steps = game.steps;
+    game.memoryStep.lastStep = copy({}, game.lastStep);
+    view.loadStep.unblock();
+    console.log("game.memoryStep =", game.memoryStep);
+  }
+
+  static loadStep() {
+    console.log("game.memoryStep =", game.memoryStep);
+    emap = copy({}, game.memoryStep.emap);
+    game.targetsUnfilled = game.memoryStep.targetsUnfilled;
+    game.steps = game.memoryStep.steps;
+    MapSvc.restoreMap();
+
+    game.lastStep = copy({}, game.memoryStep.lastStep);
+    View.countOfLastSteps();
+    if (countOfOject(game.lastStep) == 0) {
+      flag.set('last step block', true);
+      view.lastStep.block();
+    }else{
+      flag.set('last step block', false);
+      view.lastStep.unblock();
+    }
   }
 
 }

@@ -52,6 +52,12 @@ class Events {
       View.buildLevelList();
       events.modalLogic.closeModal();
     };
+    document.getElementById('save').onclick = () => {
+      AppSvc.saveStep();
+    };
+    document.getElementById('load').onclick = () => {
+      AppSvc.loadStep();
+    };
   };
 
   static hashChange() {

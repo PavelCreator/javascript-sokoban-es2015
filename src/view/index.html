@@ -57,12 +57,17 @@
           <label for="current_level">Level: </label>
           <input type='text' id='current_level' name='current_level' class="form-control wide-input" disabled>
           <label for="steps">Steps: </label>
-          <input type='text' id='steps' name='form-control' class="form-control wide-input-2" disabled>
+          <input type='text' id='steps' name='form-control' class="form-control wide-input-2" disabled />
           <label for="targetsUnfilled">Targets unfilled: </label>
-          <input type='text' id='targetsUnfilled' name='steps' class="form-control wide-input" disabled>
-          <button class="btn btn-default btn-color2 btn-margin btn-margin-2" id="openModal">FAQ
-            <i class="fa fa-info-circle"></i>
-          </button>
+          <input type='text' id='targetsUnfilled' name='steps' class="form-control wide-input" disabled />
+          <span class="btn-group dib btn-margin-2 mb-2">
+            <button class="btn btn-default btn-color2 btn-margin btn-margin-2" id="save">SAVE
+              <i class="fa fa-floppy-o" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn-color2 btn-margin btn-margin-2" id="load" disabled>LOAD
+              <i class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
+          </span>
         </p>
         <p>
           <label for="choose_level">Choose level: </label>
@@ -71,6 +76,9 @@
           </button>
           <button class="btn btn-default btn-color2 btn-margin ml3" id="undo_last_step" disabled>UNDO STEP <i class="fa fa-undo" aria-hidden="true"></i></i>
             <span id="countOfLastSteps">(0)</span>
+          </button>
+          <button class="btn btn-default btn-color2 btn-margin ml3" id="openModal">FAQ
+            <i class="fa fa-info-circle"></i>
           </button>
         </p>
       </div>
