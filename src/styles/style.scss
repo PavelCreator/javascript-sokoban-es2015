@@ -131,6 +131,8 @@ body *{
 .btn-margin-3{
   margin-left:3px;
 }
+
+
 /*Modal*/
 .modal{
   font-family:Coda, Arial, cursive;
@@ -234,4 +236,17 @@ body *{
 }
 #countOfLastSteps{
   font-weight:normal;
+}
+.animated{
+  transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -o-transition:all 0.2s ease-in-out;
+}
+.btn-green{
+  color:$green !important;
+  border:1px solid $green !important;
+}
+.fa-fixed-width{
+  width: 15px !important;
 }

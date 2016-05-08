@@ -54,9 +54,11 @@ class Events {
     };
     document.getElementById('save').onclick = () => {
       AppSvc.saveStep();
+      View.saveAnimation();
     };
     document.getElementById('load').onclick = () => {
       AppSvc.loadStep();
+      View.loadAnimation();
     };
   };
 

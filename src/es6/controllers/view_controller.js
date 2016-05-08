@@ -35,6 +35,27 @@ class View {
       view.restart.block();
     }
   }
+
+  static btnSuccessAnimation(id, defaultIcon) {
+    classFnc.add(document.getElementById(id), 'btn-green');
+    classFnc.remove(document.getElementById(id), 'btn-default');
+    classFnc.add(document.getElementById(id + '-icon'), 'fa-check-circle-o');
+    classFnc.remove(document.getElementById(id + '-icon'), defaultIcon);
+    setTimeout(function () {
+      classFnc.add(document.getElementById(id), 'btn-default');
+      classFnc.remove(document.getElementById(id), 'btn-green');
+      classFnc.add(document.getElementById(id + '-icon'), defaultIcon);
+      classFnc.remove(document.getElementById(id + '-icon'), 'fa-check-circle-o');
+    }, 1000);
+  }
+
+  static saveAnimation() {
+    this.btnSuccessAnimation('save','fa-floppy-o');
+  }
+
+  static loadAnimation() {
+    this.btnSuccessAnimation('load', 'fa-clipboard');
+  }
 }
 View.prototype.modalContent = {
   welcome(){
