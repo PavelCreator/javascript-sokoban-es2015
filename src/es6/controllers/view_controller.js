@@ -24,19 +24,27 @@ class View {
     document.getElementById('level-list').innerHTML = levelList;
   }
 
-  static countOfLastSteps(){
-    document.getElementById('countOfLastSteps').innerHTML = '('+countOfOject(game.lastStep)+')';
+  static countOfLastSteps() {
+    document.getElementById('countOfLastSteps').innerHTML = '(' + countOfOject(game.lastStep) + ')';
+  }
+
+  static restartBlockLogic() {
+    if (game.steps != 0) {
+      view.restart.unblock();
+    } else {
+      view.restart.block();
+    }
   }
 }
 View.prototype.modalContent = {
   welcome(){
-    flag.set('modal mode','welcome');
+    flag.set('modal mode', 'welcome');
     document.getElementById('closeModal').hidden = false;
     document.getElementById('modal-welcome').hidden = false;
     document.getElementById('modal-new-level').hidden = true;
   },
   nextlevel(){
-    flag.set('modal mode','nextlevel');
+    flag.set('modal mode', 'nextlevel');
     let currentLevel = game.currentLevel;
     document.getElementById('closeModal').hidden = true;
     document.getElementById('modal-welcome').hidden = true;

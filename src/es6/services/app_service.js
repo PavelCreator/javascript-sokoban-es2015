@@ -83,7 +83,10 @@ class AppSvc {
     emap = game.lastStep[lastStep].emap;
     game.targetsUnfilled = game.lastStep[lastStep].targetsUnfilled;
     game.steps = game.lastStep[lastStep].steps;
+
+    View.restartBlockLogic();
     MapSvc.restoreMap();
+
     delete game.lastStep[lastStep];
     View.countOfLastSteps();
     if (countOfOject(game.lastStep) == 0) {
@@ -95,19 +98,40 @@ class AppSvc {
 
   static saveStep() {
     game.memoryStep = Object.create(null);
+
     game.memoryStep.emap = copy({}, emap);
+
     game.memoryStep.targetsUnfilled = game.targetsUnfilled;
     game.memoryStep.steps = game.steps;
+
     game.memoryStep.lastStep = copy({}, game.lastStep);
+
+    game.memoryStep.currentLevel = game.currentLevel;
+    game.memoryStep.dimensions = copy({}, game.dimensions);
+
     view.loadStep.unblock();
-    console.log("game.memoryStep =", game.memoryStep);
+    localStorage.setItem("memoryStep", JSON.stringify(game.memoryStep));
   }
 
   static loadStep() {
-    console.log("game.memoryStep =", game.memoryStep);
+    game.memoryStep = JSON.parse(localStorage.getItem("memoryStep"));
+    var loadLevel = game.memoryStep.currentLevel;
+
+    if (loadLevel != game.currentLevel) {
+      game.currentLevelValue = loadLevel;
+      localStorage.setItem("level", loadLevel);
+      View.levelNumView(loadLevel);
+      game.dimensions = copy({}, game.memoryStep.dimensions);
+
+      view.loadStep.unblock();
+      View.buildLevelList();
+    }
+
     emap = copy({}, game.memoryStep.emap);
     game.targetsUnfilled = game.memoryStep.targetsUnfilled;
     game.steps = game.memoryStep.steps;
+
+    View.restartBlockLogic();
     MapSvc.restoreMap();
 
     game.lastStep = copy({}, game.memoryStep.lastStep);
@@ -115,10 +139,11 @@ class AppSvc {
     if (countOfOject(game.lastStep) == 0) {
       flag.set('last step block', true);
       view.lastStep.block();
-    }else{
+    } else {
       flag.set('last step block', false);
       view.lastStep.unblock();
     }
+
   }
 
 }

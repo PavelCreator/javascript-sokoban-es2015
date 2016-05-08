@@ -19,6 +19,10 @@ class MapSvc {
     }, 200);
     view.restart.block();
 
+    if (localStorage.getItem("memoryStep")){
+      view.loadStep.unblock();
+    }
+
     AppSvc.resetLevel();
     var xhr = new XMLHttpRequest();
     xhr.open('GET', `src/maps/${mapNum}.txt`, true);
