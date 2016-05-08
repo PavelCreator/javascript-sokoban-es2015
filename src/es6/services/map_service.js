@@ -63,6 +63,9 @@ class MapSvc {
 
   static restoreMap(){
     let html = '';
+
+    document.getElementById('map').style.width = (30 * (game.dimensions.x - 1) + 60) + 'px';
+
     for (var y = 0; y <= game.dimensions.y; y++) {
       html += '<div class="_row">';
       for (var x = 0; x <= game.dimensions.x; x++) {

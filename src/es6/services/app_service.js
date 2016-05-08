@@ -131,6 +131,7 @@ class AppSvc {
     game.targetsUnfilled = game.memoryStep.targetsUnfilled;
     game.steps = game.memoryStep.steps;
 
+    flag.set('user can move', false);
     View.restartBlockLogic();
     MapSvc.restoreMap();
 
@@ -143,6 +144,8 @@ class AppSvc {
       flag.set('last step block', false);
       view.lastStep.unblock();
     }
+
+    flag.set('user can move', true);
 
   }
 
